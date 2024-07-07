@@ -8,18 +8,5 @@
     .offcanvasHeader {
         padding: 0;
     }
-
-    .offcanvasBody {
-        .menuItem {
-            margin: 20px 0;
-            font-size: 1.2rem;
-            font-weight: 300;
-            cursor: pointer;
-    
-            &:hover {
-                text-decoration: underline;
-            }
-        }
-    }
 }
 
