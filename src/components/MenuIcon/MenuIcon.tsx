@@ -1,3 +1,4 @@
+import styles from './MenuIcon.module.scss';
 
 export const MenuIcon = () => {
   return (
@@ -8,13 +9,15 @@ export const MenuIcon = () => {
         </svg>
       </button>
 
-      <div className="offcanvas offcanvas-start" data-bs-scroll="true" tabIndex={-1} id="offcanvasWithBothOptions" aria-labelledby="offcanvasWithBothOptionsLabel">
-        <div className="offcanvas-header">
-          <h5 className="offcanvas-title" id="offcanvasWithBothOptionsLabel">Backdrop with scrolling</h5>
+      <div className={`offcanvas offcanvas-start ${styles.sideMenu}`} data-bs-scroll="true" tabIndex={-1} id="offcanvasWithBothOptions" aria-labelledby="offcanvasWithBothOptionsLabel">
+        <div className="offcanvas-header" data-bs-theme="dark">
           <button type="button" className="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
         </div>
         <div className="offcanvas-body">
-          <p>Try scrolling the rest of the page to see this option in action.</p>
+          <div className="menu-item">SHOP</div>
+          <div className="menu-item">COLLECTIONS</div>
+          <div className="menu-item">NEWS</div>
+          <div className="menu-item">ABOUT</div>
         </div>
       </div>
     </>

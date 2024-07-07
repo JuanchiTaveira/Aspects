@@ -1,0 +1,23 @@
+.sideMenu {
+    background: #181818b3 !important;
+    color: white !important;
+    backdrop-filter: blur(8px);
+    padding: 20px;
+    box-shadow: 2px 0 5px rgba(0, 0, 0, 0.5);
+
+    .offcanvas-header {
+        padding: 0 !important;
+    }
+}
+
+.offcanvas-body {
+    .menu-item {
+        margin: 20px 0;
+        font-size: 1.2rem;
+        cursor: pointer;
+
+        &:hover {
+            text-decoration: underline;
+        }
+    }
+}
