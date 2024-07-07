@@ -11,7 +11,6 @@ const NavBar = (props: NavBarProps) => {
   return (
     <>
       <header className="flex items-center justify-between px-2 py-2 border-b">
-
         <MenuIcon />
 
         <h1 className={styles.pageTitle}>{props.title}</h1>
@@ -21,7 +20,7 @@ const NavBar = (props: NavBarProps) => {
             <a key={index} href="#" className="p-2">{item}</a>
           ))}
         </nav>
-
+        
       </header>
     </>
   );
