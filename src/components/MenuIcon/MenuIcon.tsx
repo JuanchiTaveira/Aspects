@@ -10,7 +10,7 @@ export const MenuIcon = () => {
       </button>
 
       <div className={`offcanvas offcanvas-start ${styles.sideMenu}`} data-bs-scroll="true" tabIndex={-1} id="offcanvasWithBothOptions" aria-labelledby="offcanvasWithBothOptionsLabel">
-        <div className="offcanvas-header" data-bs-theme="dark">
+        <div className={`offcanvas-header ${styles.offcanvasHeader}`} data-bs-theme="dark">
           <button type="button" className="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
         </div>
         <div className={`offcanvas-body ${styles.offcanvasBody}`}>
