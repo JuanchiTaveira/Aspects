@@ -3,6 +3,7 @@ import { MenuIcon } from '../MenuIcon/MenuIcon';
 import styles from './NavBar.module.scss';
 import Product from '../../model/Product';
 import CartWidget from '../CartWidget/CartWidget';
+import logoHeader from '../../assets/logo/logoHeader.png';
 
 interface NavBarProps {
   title: string;
@@ -19,7 +20,7 @@ const NavBar = (props: NavBarProps) => {
         <MenuIcon />
 
         <a href="#" className={styles.pageTitle}>
-          <h1>{props.title}</h1>
+          <img className="h-8" src={logoHeader} alt="logo" />
         </a>
 
         <nav className="flex items-center space-x-4">
