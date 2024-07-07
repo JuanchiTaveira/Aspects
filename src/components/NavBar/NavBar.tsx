@@ -25,7 +25,7 @@ const NavBar = (props: NavBarProps) => {
           {props.navItems.map((item, index) => (
             <a key={index} href="#" className="p-2">{item}</a>
           ))}
-          <a key={props.navItems.length} href="#" className="p-2">{`MY BAG (${cart.length})`}</a> //TODO: add buttons to add and remove items from cart. Then update the cart length
+          <a key={props.navItems.length} href="#" className="p-2">{`MY BAG (${cart.length})`}</a> {/* //TODO: add buttons to add and remove items from cart. Then update the cart length */}
         </nav>
 
       </header>
