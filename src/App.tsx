@@ -8,7 +8,7 @@ function App() {
   return (
     <>
       <div className="App">
-        <NavBar title="Aspects" navItems={["SEARCH", "ACCOUNT", "MY BAG (0)"]} />
+        <NavBar title="Aspects" navItems={["SEARCH", "ACCOUNT"]} />
         <ProductsContainer products={products} />
       </div>
     </>
