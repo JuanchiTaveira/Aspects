@@ -13,11 +13,11 @@ export const MenuIcon = () => {
         <div className="offcanvas-header" data-bs-theme="dark">
           <button type="button" className="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
         </div>
-        <div className="offcanvas-body">
-          <div className="menu-item">SHOP</div>
-          <div className="menu-item">COLLECTIONS</div>
-          <div className="menu-item">NEWS</div>
-          <div className="menu-item">ABOUT</div>
+        <div className={`offcanvas-body ${styles.offcanvasBody}`}>
+          <div className={styles.menuItem}>SHOP</div>
+          <div className={styles.menuItem}>COLLECTIONS</div>
+          <div className={styles.menuItem}>NEWS</div>
+          <div className={styles.menuItem}>ABOUT</div>
         </div>
       </div>
     </>
