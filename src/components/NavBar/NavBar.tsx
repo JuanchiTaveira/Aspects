@@ -2,6 +2,7 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import { MenuIcon } from '../MenuIcon/MenuIcon';
 import styles from './NavBar.module.scss';
 import Product from '../../model/Product';
+import CartWidget from '../CartWidget/CartWidget';
 
 interface NavBarProps {
   title: string;
@@ -25,7 +26,8 @@ const NavBar = (props: NavBarProps) => {
           {props.navItems.map((item, index) => (
             <a key={index} href="#" className="p-2">{item}</a>
           ))}
-          <a key={props.navItems.length} href="#" className="p-2">{`MY BAG (${cart.length})`}</a> {/* //TODO: add buttons to add and remove items from cart. Then update the cart length */}
+
+          <CartWidget cart={cart} />
         </nav>
 
       </header>
