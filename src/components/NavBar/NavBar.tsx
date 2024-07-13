@@ -1,9 +1,7 @@
 import 'bootstrap/dist/css/bootstrap.min.css';
 import { MenuIcon } from '../MenuIcon/MenuIcon';
-import styles from './NavBar.module.scss';
 import Product from '../../model/Product';
 import CartWidget from '../CartWidget/CartWidget';
-import logoHeader from '../../assets/logo/logoHeader.png';
 import { useMediaQuery } from 'react-responsive';
 import LogoImg from '../LogoImg/LogoImg';
 
