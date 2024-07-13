@@ -9,7 +9,9 @@ function App() {
     <>
       <div className="App">
         <NavBar title="Aspects" navItems={["SEARCH", "ACCOUNT"]} />
-        <ProductsContainer products={products} />
+        <main className="px-4 py-8">
+          <ProductsContainer products={products} />
+        </main>
       </div>
     </>
   )

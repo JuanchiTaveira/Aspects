@@ -6,17 +6,17 @@ interface Props {
 
 export const ProductsContainer = (props: Props) => {
     return (
-        <>
+        <div className="grid grid-cols-1 gap-4 md:grid-cols-2 lg:grid-cols-4">
             {props.products.map((product, index) => (
-                <div key={index} className="card">
-                    <div className="card-body">
-                        <h5 className="card-title">{product.name}</h5>
-                        <p className="card-text">{product.description}</p>
-                        <p className="card-text">${product.price}</p>
+                <div key={index} className="space-y-2">
+                    <img src={product.imageUrl} alt={product.alt} className="w-full" />
+                    <div className="flex justify-between">
+                        <p className="text-sm">{product.name}</p>
+                        <p className="text-sm">€{product.price}</p>
                     </div>
                 </div>
             ))}
-        </>
+        </div>
     );
 };
 
