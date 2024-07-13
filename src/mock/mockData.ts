@@ -32,5 +32,45 @@ export const products: Product[] = [
       description: "Description 4",
       imageUrl: "https://eu.aimeleondore.com/cdn/shop/files/4x5_SS24_D4FLATSSS24KS022_CAMEL_0324_800x.jpg?v=1712609568",
       alt: "Product 4"
+    }, 
+    {
+      id: 5,
+      name: "Product 5",
+      price: 400,
+      description: "Description 5",
+      imageUrl: "https://eu.aimeleondore.com/cdn/shop/files/4x5_SS24_D4FLATSSS24KS022_CAMEL_0324_800x.jpg?v=1712609568",
+      alt: "Product 5"
+    },
+    {
+      id: 6,
+      name: "Product 6",
+      price: 400,
+      description: "Description 6",
+      imageUrl: "https://eu.aimeleondore.com/cdn/shop/files/4x5_SS24_D4FLATSSS24KS022_CAMEL_0324_800x.jpg?v=1712609568",
+      alt: "Product 6"
+    },
+    {
+      id: 7,
+      name: "Product 7",
+      price: 400,
+      description: "Description 7",
+      imageUrl: "https://eu.aimeleondore.com/cdn/shop/files/4x5_SS24_D4FLATSSS24KS022_CAMEL_0324_800x.jpg?v=1712609568",
+      alt: "Product 7"
+    },
+    {
+      id: 8,
+      name: "Product 8",
+      price: 400,
+      description: "Description 8",
+      imageUrl: "https://eu.aimeleondore.com/cdn/shop/files/4x5_SS24_D4FLATSSS24KS022_CAMEL_0324_800x.jpg?v=1712609568",
+      alt: "Product 8"
+    },
+    {
+      id: 9,
+      name: "Product 9",
+      price: 400,
+      description: "Description 9",
+      imageUrl: "https://eu.aimeleondore.com/cdn/shop/files/4x5_SS24_D4FLATSSS24KS022_CAMEL_0324_800x.jpg?v=1712609568",
+      alt: "Product 9"
     }
   ];
