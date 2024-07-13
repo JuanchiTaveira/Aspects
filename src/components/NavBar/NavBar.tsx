@@ -5,6 +5,7 @@ import Product from '../../model/Product';
 import CartWidget from '../CartWidget/CartWidget';
 import logoHeader from '../../assets/logo/logoHeader.png';
 import { useMediaQuery } from 'react-responsive';
+import LogoImg from '../LogoImg/LogoImg';
 
 interface NavBarProps {
   title: string;
@@ -23,17 +24,12 @@ const NavBar = (props: NavBarProps) => {
         {isMobile ? (
           <div className="flex items-center justify-between w-full">
             <MenuIcon />
-            <a href="#" className={styles.pageTitle}>
-              <img className="h-8" src={logoHeader} alt="logo" />
-            </a>
+            <LogoImg tailwindHeight="h-8" />
           </div>
         ) : (
           <>
             <MenuIcon />
-
-            <a href="#" className={styles.pageTitle}>
-              <img className="h-8" src={logoHeader} alt="logo" />
-            </a>
+            <LogoImg tailwindHeight="h-8" />
           </>
         )}
 
