@@ -1,6 +1,11 @@
 .main {
     position: fixed;
     top: 61px;
+
+    @media (max-width: 768px) {
+        top: 101px;
+    }
+
     left: 0;
     right: 0;
     bottom: 0;
