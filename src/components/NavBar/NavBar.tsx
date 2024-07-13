@@ -16,21 +16,22 @@ const NavBar = (props: NavBarProps) => {
 
   return (
     <>
-      <header className="flex items-center justify-between px-2 py-2 border-b">
-        <MenuIcon />
+      <header className="fixed w-full h-[61px] bg-white">
+        <div className="flex items-center justify-between px-2 py-2 border-b">
+          <MenuIcon />
 
-        <a href="#" className={styles.pageTitle}>
-          <img className="h-8" src={logoHeader} alt="logo" />
-        </a>
+          <a href="#" className={styles.pageTitle}>
+            <img className="h-8" src={logoHeader} alt="logo" />
+          </a>
 
-        <nav className="flex items-center space-x-4">
-          {props.navItems.map((item, index) => (
-            <a key={index} href="#" className="p-2">{item}</a>
-          ))}
+          <nav className="flex items-center space-x-4">
+            {props.navItems.map((item, index) => (
+              <a key={index} href="#" className="p-2">{item}</a>
+            ))}
 
-          <CartWidget cart={cart} />
-        </nav>
-
+            <CartWidget cart={cart} />
+          </nav>
+        </div>
       </header>
     </>
   );
