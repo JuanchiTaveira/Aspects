@@ -29,7 +29,7 @@ export const ProductFilter = () => {
     }, [isVisible]);
 
     return (
-        <div className={`sticky top-0 z-[1] ${styles.filters} ${!isVisible ? "hidden" : ""}`}>
+        <div className={`sticky top-0 z-[1] ${styles.filters} ${isVisible ? styles.visible : styles.hidden}`}>
             <div className={`flex justify-between items-center border-b`}>
                 <button className="text-sm px-4 py-4">Shop All</button>
                 <button className="text-sm px-4 py-4">Refine</button>
