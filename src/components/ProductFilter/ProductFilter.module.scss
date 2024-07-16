@@ -18,7 +18,7 @@
     top: 130px !important;
     @media (max-width: $mobile-width) {
         top: 170px !important;
-        
+        width: 100% !important;
     }
     z-index: 1030;
     width: 250px;
