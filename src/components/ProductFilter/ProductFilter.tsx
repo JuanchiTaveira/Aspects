@@ -1,23 +1,21 @@
 import { useEffect, useState } from 'react';
 import styles from './ProductFilter.module.scss';
 
-export const ProductFilter = () => {
-
+const ProductFilter = () => {
     const [isVisible, setIsVisible] = useState(true);
-    
+
     useEffect(() => {
         const mainElement = document.querySelector("main");
         let lastScrollY = mainElement!.scrollTop;
 
-        const handleScroll = () => {            
+        const handleScroll = () => {
             const currentScrollY = mainElement!.scrollTop;
             const shouldBecomeVisible = currentScrollY < lastScrollY;
 
-            // Solo actualiza el estado si el valor ha cambiado
             if (shouldBecomeVisible !== isVisible) {
                 setIsVisible(shouldBecomeVisible);
             }
-            
+
             lastScrollY = currentScrollY;
         };
 
@@ -29,13 +27,24 @@ export const ProductFilter = () => {
     }, [isVisible]);
 
     return (
-        <div className={`sticky top-0 z-[1] ${styles.filters} ${isVisible ? styles.visible : styles.hidden}`}>
-            <div className={`flex justify-between items-center border-b`}>
-                <button className="text-sm px-4 py-4">Shop All</button>
-                <button className="text-sm px-4 py-4">Refine</button>
+        <>
+            <div className={`sticky top-0 ${styles.filters} ${isVisible ? styles.visible : styles.hidden}`}>
+                <div className={`flex justify-between items-center border-b`}>
+                    <button className="text-sm px-4 py-4">Shop All</button>
+                    <button className="text-sm px-4 py-4" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasRight" aria-controls="offcanvasRight">Refine</button>
+                </div>
             </div>
-        </div>
-    )
+            <div className={`offcanvas offcanvas-end ${styles.offcanvasRight}`} tabIndex={-1} id="offcanvasRight" aria-labelledby="offcanvasRightLabel">
+                <div className="offcanvas-header">
+                    <h5 id="offcanvasRightLabel">Filter Options</h5>
+                    <button type="button" className="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+                </div>
+                <div className="offcanvas-body">
+                    Content for your offcanvas goes here.
+                </div>
+            </div>
+        </>
+    );
 }
 
 export default ProductFilter;

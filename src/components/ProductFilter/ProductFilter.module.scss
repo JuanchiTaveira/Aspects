@@ -1,7 +1,18 @@
 .filters {
     transition: top .2s;
     width: 100%;
-    background: #fff;
+    position: sticky;
+    top: 0;
+    z-index: 1050;
+    background-color: #fff;
+}
+
+
+.offcanvasRight {
+    top: 130px !important;
+    z-index: 1030;
+    width: 250px;
+    transition: transform 0.3s ease-in-out;
 }
 
 .visible {

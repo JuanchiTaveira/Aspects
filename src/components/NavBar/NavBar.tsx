@@ -1,4 +1,3 @@
-import 'bootstrap/dist/css/bootstrap.min.css';
 import { MenuIcon } from '../MenuIcon/MenuIcon';
 import Product from '../../model/Product';
 import CartWidget from '../CartWidget/CartWidget';
