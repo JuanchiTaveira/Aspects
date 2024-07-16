@@ -31,12 +31,12 @@ const ProductFilter = () => {
             <div className={`sticky top-0 ${styles.filters} ${isVisible ? styles.visible : styles.hidden}`}>
                 <div className={`flex justify-between items-center border-b`}>
                     <button className="text-sm px-4 py-4">Shop All</button>
-                    <button className="text-sm px-4 py-4" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasRight" aria-controls="offcanvasRight">Refine</button>
+                    <button className="text-sm px-4 py-4" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasFilters" aria-controls="offcanvasFilters">Refine</button>
                 </div>
             </div>
-            <div className={`offcanvas offcanvas-end ${styles.offcanvasRight}`} tabIndex={-1} id="offcanvasRight" aria-labelledby="offcanvasRightLabel">
+            <div className={`offcanvas offcanvas-start ${styles.offcanvasFilters}`} tabIndex={-1} id="offcanvasFilters" aria-labelledby="offcanvasFiltersLabel">
                 <div className="offcanvas-header">
-                    <h5 id="offcanvasRightLabel">Filter Options</h5>
+                    <h5 id="offcanvasFiltersLabel">Filter Options</h5>
                     <button type="button" className="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close"></button>
                 </div>
                 <div className="offcanvas-body">
