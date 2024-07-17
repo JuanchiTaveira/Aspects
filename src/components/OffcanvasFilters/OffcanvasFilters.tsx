@@ -18,11 +18,11 @@ export interface OffcanvasFiltersProps {
 export const OffcanvasFilters = (props: OffcanvasFiltersProps) => {
     return (
         <form className={styles.offcanvasFilters}>
-            <div className="form-check p-0 pb-3">
-                <input className={`form-check-input ${styles.soldOutCheckbox}`} type="checkbox" name="hideSoldOut" id="hideSoldOut" />
+            <div className="px-0 form-check flex items-center space-x-2 justify-between">
                 <label className="form-check-label" htmlFor="hideSoldOut">
                     Hide sold out products
                 </label>
+                <input className={`form-check-input ${styles.soldOutCheckbox}`} type="checkbox" name="hideSoldOut" id="hideSoldOut" />
             </div>
             <div className={`accordion accordion-flush ${styles.accordionFilters}`} id="accordionFilters">
 
