@@ -18,20 +18,20 @@ export interface OffcanvasFiltersProps {
 export const OffcanvasFilters = (props: OffcanvasFiltersProps) => {
     return (
         <form className={styles.offcanvasFilters}>
-            <div className="form-check">
-                <label className="form-check-label" htmlFor="hideSold">
+            <div className="form-check p-0 pb-3">
+                <input className={`form-check-input ${styles.soldOutCheckbox}`} type="checkbox" name="hideSoldOut" id="hideSoldOut" />
+                <label className="form-check-label" htmlFor="hideSoldOut">
                     Hide sold out products
                 </label>
-                <input className="form-check-input" type="checkbox" value="" id="hideSold" />
             </div>
             <div className={`accordion accordion-flush ${styles.accordionFilters}`} id="accordionFilters">
 
-                <h3>COLLECTIONS</h3>
+                <h3 className="py-4">COLLECTIONS</h3>
                 {props.collectionItems.items.map((item, index) => {
                     return (
                         <div className="accordion-item" key={index}>
                             <h2 className="accordion-header" id="headingOne">
-                                <button className="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                <button className="accordion-button collapsed px-0" type="button" data-bs-toggle="collapse"
                                     data-bs-target={`#collecionColapse${index}`} aria-expanded="false" aria-controls={`collecionColapse${index}`}>
                                     {item.title}
                                 </button>
@@ -52,12 +52,12 @@ export const OffcanvasFilters = (props: OffcanvasFiltersProps) => {
                     );
                 })}
 
-                <h3>FILTER BY</h3>
+                <h3 className="py-5">FILTER BY</h3>
                 {props.filterByItems.items.map((item, index) => {
                     return (
-                        <div className={`accordion-item ${styles.accordionItem}`} key={index}>
+                        <div className={`accordion-item`} key={index}>
                             <h2 className="accordion-header" id="headingTwo">
-                                <button className="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                <button className="accordion-button collapsed px-0" type="button" data-bs-toggle="collapse"
                                     data-bs-target={`#sizeCollapse${index}`} aria-expanded="false" aria-controls={`sizeCollapse${index}`}>
                                     {item.title}
                                 </button>

@@ -61,7 +61,7 @@ const ProductFilter = () => {
                     <button className="text-sm px-4 py-4">Shop All</button>
                 </div>
             </div>
-            <div className={`offcanvas offcanvas-start ${styles.offcanvasFilters}`} tabIndex={-1} id="offcanvasFilters" aria-labelledby="offcanvasFiltersLabel">
+            <div className={`offcanvas offcanvas-start ${styles.offcanvasFilters} p-4`} tabIndex={-1} id="offcanvasFilters" aria-labelledby="offcanvasFiltersLabel">
                 <div className="offcanvas-header">
                     <button type="button" className="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close"></button>
                 </div>
