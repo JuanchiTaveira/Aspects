@@ -1,5 +1,7 @@
 import { useEffect, useState } from 'react';
 import styles from './ProductFilter.module.scss';
+import OffcanvasFilters, { OffcanvasFiltersProps } from '../OffcanvasFilters/OffcanvasFilters';
+
 
 const ProductFilter = () => {
     const [isVisible, setIsVisible] = useState(true);
@@ -26,6 +28,31 @@ const ProductFilter = () => {
         };
     }, [isVisible]);
 
+    const offcanvasFiltersProps: OffcanvasFiltersProps = {
+        collectionItems: {
+            items: [
+                {
+                    title: "Category",
+                    subItems: ["Shirting", "Sweaters", "Bottoms", "Headwear", "Accessories"]
+                }]
+        },
+        filterByItems: {
+            items: [
+                {
+                    title: "Color",
+                    subItems: ["Black", "White", "Red", "Blue", "Green", "Yellow", "Orange", "Purple", "Pink"]
+                },
+                {
+                    title: "Size",
+                    subItems: ["XS", "S", "M", "L", "XL", "XXL"]
+                },
+                {
+                    title: "Price",
+                    subItems: ["$0 - $50", "$50 - $100", "$100 - $150", "$150 - $200", "$200 - $250", "$250 - $300"]
+                }]
+        }
+    }
+
     return (
         <>
             <div className={`sticky top-0 ${styles.filters} ${isVisible ? styles.visible : styles.hidden}`}>
@@ -39,121 +66,7 @@ const ProductFilter = () => {
                     <button type="button" className="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close"></button>
                 </div>
                 <div className="offcanvas-body">
-                    <form>
-                        <div className="form-check">
-                            <label className="form-check-label" htmlFor="hideSold">
-                                Hide sold out products
-                            </label>
-                            <input className="form-check-input" type="checkbox" value="" id="hideSold" />
-                        </div>
-                        <h3>COLLECTIONS</h3>
-                        <div className="accordion accordion-flush" id="accordionFilters">
-                            <div className="accordion-item">
-                                <h2 className="accordion-header" id="headingOne">
-                                    <button className="accordion-button collapsed" type="button" data-bs-toggle="collapse"
-                                        data-bs-target="#collecionColapse" aria-expanded="false" aria-controls="collecionColapse">
-                                        Category
-                                    </button>
-                                </h2>
-                                <div id="collecionColapse" className={`accordion-collapse collapse ${styles.collapseItem}`}
-                                    aria-labelledby="headingOne" data-bs-parent="#accordionFilters">
-                                    <div className={`accordion-body ${styles.accordionBody}`}>
-                                        <div className={`list-group ${styles.listGroup}`}>
-                                            <button type="button" className="list-group-item list-group-item-action">Shirting</button>
-                                            <button type="button" className="list-group-item list-group-item-action">Sweaters</button>
-                                            <button type="button" className="list-group-item list-group-item-action">Shorts</button>
-                                            <button type="button" className="list-group-item list-group-item-action">Headwear</button>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <h3>FILTER BY</h3>
-                            <div className="accordion-item">
-                                <h2 className="accordion-header" id="headingTwo">
-                                    <button className="accordion-button collapsed" type="button" data-bs-toggle="collapse"
-                                        data-bs-target="#sizeCollapse" aria-expanded="false" aria-controls="sizeCollapse">
-                                        Size
-                                    </button>
-                                </h2>
-                                <div id="sizeCollapse" className={`accordion-collapse collapse ${styles.collapseItem}`}
-                                    aria-labelledby="headingTwo" data-bs-parent="#accordionFilters">
-                                    <div className={`accordion-body ${styles.accordionBody}`}>
-                                        <div className={`list-group ${styles.listGroup}`}>
-                                            <div className="form-check">
-                                                <label className="form-check-label" htmlFor="hideSold">
-                                                    XS
-                                                </label>
-                                                <input className="form-check-input" type="checkbox" value="" id="hideSold" />
-                                            </div>
-
-                                            <div className="form-check">
-                                                <label className="form-check-label" htmlFor="hideSold">
-                                                    S
-                                                </label>
-                                                <input className="form-check-input" type="checkbox" value="" id="hideSold" />
-                                            </div>
-
-                                            <div className="form-check">
-                                                <label className="form-check-label" htmlFor="hideSold">
-                                                    M
-                                                </label>
-                                                <input className="form-check-input" type="checkbox" value="" id="hideSold" />
-                                            </div>
-
-                                            <div className="form-check">
-                                                <label className="form-check-label" htmlFor="hideSold">
-                                                    L
-                                                </label>
-                                                <input className="form-check-input" type="checkbox" value="" id="hideSold" />
-                                            </div>
-
-                                            <div className="form-check">
-                                                <label className="form-check-label" htmlFor="hideSold">
-                                                    XL
-                                                </label>
-                                                <input className="form-check-input" type="checkbox" value="" id="hideSold" />
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div className="accordion-item">
-                                <h2 className="accordion-header" id="headingTwo">
-                                    <button className="accordion-button collapsed" type="button" data-bs-toggle="collapse"
-                                        data-bs-target="#colorCollapse" aria-expanded="false" aria-controls="colorCollapse">
-                                        Color
-                                    </button>
-                                </h2>
-                                <div id="colorCollapse" className={`accordion-collapse collapse ${styles.collapseItem}`}
-                                    aria-labelledby="headingTwo" data-bs-parent="#accordionFilters">
-                                    <div className={`accordion-body ${styles.accordionBody}`}>
-                                        <div className={`list-group ${styles.listGroup}`}>
-                                            <div className="form-check">
-                                                <label className="form-check-label" htmlFor="hideSold">
-                                                    Black
-                                                </label>
-                                                <input className="form-check-input" type="checkbox" value="" id="hideSold" />
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div className="accordion-item">
-                                <h2 className="accordion-header" id="headingThree">
-                                    <button className="accordion-button collapsed" type="button" data-bs-toggle="collapse"
-                                        data-bs-target="#viewOptionsCollapse" aria-expanded="false" aria-controls="viewOptionsCollapse">
-                                        View Options
-                                    </button>
-                                </h2>
-                                <div id="viewOptionsCollapse" className={`accordion-collapse collapse ${styles.collapseItem}`}
-                                    aria-labelledby="headingThree" data-bs-parent="#accordionFilters">
-                                    <div className={`accordion-body ${styles.accordionBody}`}>
-                                        {/* TODO: add view options */}
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </form>
+                    <OffcanvasFilters collectionItems={offcanvasFiltersProps.collectionItems} filterByItems={offcanvasFiltersProps.filterByItems} />
                 </div>
             </div>
         </>

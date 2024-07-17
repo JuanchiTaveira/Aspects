@@ -1,0 +1,17 @@
+
+.offcanvasFilters {
+    
+    .collapseItem {
+        visibility: visible;
+
+        .accordionBody {
+            padding: 0;
+
+            .listGroup {
+                button {
+                    border: none;
+                }
+            }
+        }
+    }
+}
