@@ -52,7 +52,7 @@ export const OffcanvasFilters = (props: OffcanvasFiltersProps) => {
                     );
                 })}
 
-                <h3 className="py-5">FILTER BY</h3>
+                <h3 className="py-4">FILTER BY</h3>
                 {props.filterByItems.items.map((item, index) => {
                     return (
                         <div className={`accordion-item`} key={index}>
