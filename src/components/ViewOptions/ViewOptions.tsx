@@ -13,10 +13,50 @@ export const ViewOptions = () => {
             <div id={`sizeCollapse`} className={`accordion-collapse collapse ${styles.collapseItem}`}
                 aria-labelledby="headingTwo" data-bs-parent="#accordionFilters">
                 <div className={`accordion-body ${styles.accordionBody} pb-2`}>
-                    <div className={`list-group ${styles.listGroup}`}>
-                        <RoundedBlackCheckbox id="x8" />
-                        <RoundedBlackCheckbox id="x4" />
-                        <RoundedBlackCheckbox id="x2" />
+                    <div className={`list-group ${styles.listGroup} flex flex-row justify-between`}>
+                        <div className="flex flex-row">
+                            <RoundedBlackCheckbox id="x8" type="radio" name="viewOptionRadio" />
+                            <svg width="70" height="16" viewBox="0 0 70 16" fill="none" xmlns="http://www.w3.org/2000/svg" className="pl-2">
+                                <rect width="7" height="7" fill="#C4C4C4"></rect>
+                                <rect x="9" width="7" height="7" fill="#C4C4C4"></rect>
+                                <rect x="18" width="7" height="7" fill="#C4C4C4"></rect>
+                                <rect x="27" width="7" height="7" fill="#C4C4C4"></rect>
+                                <rect x="36" width="7" height="7" fill="#C4C4C4"></rect>
+                                <rect x="45" width="7" height="7" fill="#C4C4C4"></rect>
+                                <rect x="54" width="7" height="7" fill="#C4C4C4"></rect>
+                                <rect x="63" width="7" height="7" fill="#C4C4C4"></rect>
+                                <rect y="9" width="7" height="7" fill="#C4C4C4"></rect>
+                                <rect x="9" y="9" width="7" height="7" fill="#C4C4C4"></rect>
+                                <rect x="18" y="9" width="7" height="7" fill="#C4C4C4"></rect>
+                                <rect x="27" y="9" width="7" height="7" fill="#C4C4C4"></rect>
+                                <rect x="36" y="9" width="7" height="7" fill="#C4C4C4"></rect>
+                                <rect x="45" y="9" width="7" height="7" fill="#C4C4C4"></rect>
+                                <rect x="54" y="9" width="7" height="7" fill="#C4C4C4"></rect>
+                                <rect x="63" y="9" width="7" height="7" fill="#C4C4C4"></rect>
+                            </svg>
+                        </div>
+                        <div className="flex flex-row pl-3">
+                            <RoundedBlackCheckbox id="x4" type="radio" name="viewOptionRadio" />
+                            <svg width="70" height="16" viewBox="0 0 70 16" fill="none" xmlns="http://www.w3.org/2000/svg" className="pl-2">
+                                <rect width="7" height="7" fill="#C4C4C4"></rect>
+                                <rect x="9" width="7" height="7" fill="#C4C4C4"></rect>
+                                <rect x="18" width="7" height="7" fill="#C4C4C4"></rect>
+                                <rect x="27" width="7" height="7" fill="#C4C4C4"></rect>
+                                <rect y="9" width="7" height="7" fill="#C4C4C4"></rect>
+                                <rect x="9" y="9" width="7" height="7" fill="#C4C4C4"></rect>
+                                <rect x="18" y="9" width="7" height="7" fill="#C4C4C4"></rect>
+                                <rect x="27" y="9" width="7" height="7" fill="#C4C4C4"></rect>
+                            </svg>
+                        </div>
+                        <div className="flex flex-row pl-3">
+                            <RoundedBlackCheckbox id="x2" type="radio" name="viewOptionRadio" />
+                            <svg width="70" height="16" viewBox="0 0 70 16" fill="none" xmlns="http://www.w3.org/2000/svg" className="pl-2">
+                                <rect width="7" height="7" fill="#C4C4C4"></rect>
+                                <rect x="9" width="7" height="7" fill="#C4C4C4"></rect>
+                                <rect y="9" width="7" height="7" fill="#C4C4C4"></rect>
+                                <rect x="9" y="9" width="7" height="7" fill="#C4C4C4"></rect>
+                            </svg>
+                        </div>
                     </div>
                 </div>
             </div>

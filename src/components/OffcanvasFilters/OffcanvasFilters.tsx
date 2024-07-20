@@ -24,7 +24,7 @@ export const OffcanvasFilters = (props: OffcanvasFiltersProps) => {
                 <label className="form-check-label" htmlFor="hideSoldOut">
                     Hide sold out products
                 </label>
-                <RoundedBlackCheckbox id="hideSoldOut" name="hideSoldOut" />
+                <RoundedBlackCheckbox id="hideSoldOut" name="hideSoldOut" type="checkbox" />
             </div>
             <div className={`accordion accordion-flush ${styles.accordionFilters}`} id="accordionFilters">
 
@@ -71,7 +71,7 @@ export const OffcanvasFilters = (props: OffcanvasFiltersProps) => {
                                         {item.subItems.map((subItem, index) => {
                                             return (
                                                 <div className="form-check flex items-center space-x-2 justify-start" key={index}>
-                                                    <RoundedBlackCheckbox id={`subitem${index}`} />
+                                                    <RoundedBlackCheckbox id={`subitem${index}`} type="checkbox"/>
                                                     <label className="form-check-label" htmlFor={`subitem${index}`}>
                                                         {subItem}
                                                     </label>
