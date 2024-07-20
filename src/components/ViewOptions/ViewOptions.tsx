@@ -19,8 +19,22 @@ export const ViewOptions = () => {
     useEffect(() => {
         const productsContainer = document.getElementById("productsContainer");
 
-        const gridTemplateColumnsValue = `repeat(${viewOptionRadio}, minmax(0, 1fr))`;
+        const gridTemplateColumnsValue = `repeat(${viewOptionRadio}, minmax(0, 1fr))`; //TODO: use setViewOptionRadio instead of change css value
         productsContainer!.style.gridTemplateColumns = gridTemplateColumnsValue;
+
+        if (!isLgScreen()) {
+            if ((viewOptionRadio === "8") || (isSmScreen() && viewOptionRadio === "4")) {
+                document.querySelectorAll(".product-details").forEach((element) => {
+                    element.classList.add("hidden");
+                });
+            } else {
+                document.querySelectorAll(".product-details").forEach((element) => {
+                    element.classList.remove("hidden");
+                });
+            }
+        }
+
+
 
     }, [viewOptionRadio]);
 
@@ -78,8 +92,16 @@ export const ViewOptions = () => {
     );
 };
 
+function isLgScreen(): boolean {
+    return window.innerWidth >= TAILWIND_BREAKPOINTS.lg;
+}
+
 function isMdScreen(): boolean {
     return window.innerWidth >= TAILWIND_BREAKPOINTS.md;
+}
+
+function isSmScreen(): boolean {
+    return window.innerWidth < TAILWIND_BREAKPOINTS.md;
 }
 
 export default ViewOptions;
