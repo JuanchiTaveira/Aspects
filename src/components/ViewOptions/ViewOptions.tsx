@@ -78,16 +78,8 @@ export const ViewOptions = () => {
     );
 };
 
-function isLgScreen(): boolean {
-    return window.innerWidth >= TAILWIND_BREAKPOINTS.lg;
-}
-
 function isMdScreen(): boolean {
     return window.innerWidth >= TAILWIND_BREAKPOINTS.md;
-}
-
-function isSmScreen(): boolean {
-    return window.innerWidth >= TAILWIND_BREAKPOINTS.sm;
 }
 
 export default ViewOptions;
