@@ -63,7 +63,7 @@ const ProductFilter = () => {
             </div>
             <div className={`offcanvas offcanvas-start ${styles.offcanvasFilters} p-4`} tabIndex={-1} id="offcanvasFilters" aria-labelledby="offcanvasFiltersLabel">
                 <div className="offcanvas-header">
-                    <button type="button" className="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+                    <button type="button" className="btn-close text-reset shadow-none" data-bs-dismiss="offcanvas" aria-label="Close"></button>
                 </div>
                 <div className="offcanvas-body">
                     <OffcanvasFilters collectionItems={offcanvasFiltersProps.collectionItems} filterByItems={offcanvasFiltersProps.filterByItems} />
