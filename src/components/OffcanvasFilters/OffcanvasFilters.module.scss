@@ -1,6 +1,6 @@
 .offcanvasFilters {
 
-    .soldOutCheckbox {
+    .roundedBlackCheckbox {
         appearance: none;
         -webkit-appearance: none;
         margin: 0;
@@ -12,9 +12,20 @@
         background-color: white;
         background-image: none;
         border-color: black !important;
+        box-shadow: none !important;
 
         &:checked {
             background-color: black;
+        }
+    }
+
+    .accordionFilters {
+        h2 {
+            button {
+                color: black;
+                background-color: transparent;
+                box-shadow: none;
+            }
         }
     }
 

@@ -22,11 +22,11 @@ export const OffcanvasFilters = (props: OffcanvasFiltersProps) => {
                 <label className="form-check-label" htmlFor="hideSoldOut">
                     Hide sold out products
                 </label>
-                <input className={`form-check-input ${styles.soldOutCheckbox}`} type="checkbox" name="hideSoldOut" id="hideSoldOut" />
+                <input className={`form-check-input ${styles.roundedBlackCheckbox}`} type="checkbox" name="hideSoldOut" id="hideSoldOut" />
             </div>
             <div className={`accordion accordion-flush ${styles.accordionFilters}`} id="accordionFilters">
 
-                <h3 className="py-4">COLLECTIONS</h3>
+                <h3 className={props.collectionItems.items.length > 1 ? "pt-[24px] pb-[8px]" : "py-4"}>COLLECTIONS</h3>
                 {props.collectionItems.items.map((item, index) => {
                     return (
                         <div className="accordion-item" key={index}>
@@ -52,7 +52,7 @@ export const OffcanvasFilters = (props: OffcanvasFiltersProps) => {
                     );
                 })}
 
-                <h3 className="py-4">FILTER BY</h3>
+                <h3 className={props.filterByItems.items.length > 1 ? "pt-[24px] pb-[8px]" : "py-4"}>FILTER BY</h3>
                 {props.filterByItems.items.map((item, index) => {
                     return (
                         <div className={`accordion-item`} key={index}>
@@ -64,15 +64,15 @@ export const OffcanvasFilters = (props: OffcanvasFiltersProps) => {
                             </h2>
                             <div id={`sizeCollapse${index}`} className={`accordion-collapse collapse ${styles.collapseItem}`}
                                 aria-labelledby="headingTwo" data-bs-parent="#accordionFilters">
-                                <div className={`accordion-body ${styles.accordionBody}`}>
+                                <div className={`accordion-body ${styles.accordionBody} pb-2`}>
                                     <div className={`list-group ${styles.listGroup}`}>
                                         {item.subItems.map((subItem, index) => {
                                             return (
-                                                <div className="form-check" key={index}>
-                                                    <label className="form-check-label" htmlFor="hideSold">
+                                                <div className="form-check flex items-center space-x-2 justify-start" key={index}>
+                                                    <input className={`form-check-input ${styles.roundedBlackCheckbox}`} type="checkbox" value="" id={`subitem${index}`} />
+                                                    <label className="form-check-label" htmlFor={`subitem${index}`}>
                                                         {subItem}
                                                     </label>
-                                                    <input className="form-check-input" type="checkbox" value="" id="hideSold" />
                                                 </div>
                                             );
                                         })}
