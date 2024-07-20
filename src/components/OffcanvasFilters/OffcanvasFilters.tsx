@@ -1,3 +1,5 @@
+import RoundedBlackCheckbox from '../RoundedBlackCheckbox/RoundedBlackCheckbox';
+import ViewOptions from '../ViewOptions/ViewOptions';
 import styles from './OffcanvasFilters.module.scss';
 
 interface Item {
@@ -22,7 +24,7 @@ export const OffcanvasFilters = (props: OffcanvasFiltersProps) => {
                 <label className="form-check-label" htmlFor="hideSoldOut">
                     Hide sold out products
                 </label>
-                <input className={`form-check-input ${styles.roundedBlackCheckbox}`} type="checkbox" name="hideSoldOut" id="hideSoldOut" />
+                <RoundedBlackCheckbox id="hideSoldOut" name="hideSoldOut" />
             </div>
             <div className={`accordion accordion-flush ${styles.accordionFilters}`} id="accordionFilters">
 
@@ -69,7 +71,7 @@ export const OffcanvasFilters = (props: OffcanvasFiltersProps) => {
                                         {item.subItems.map((subItem, index) => {
                                             return (
                                                 <div className="form-check flex items-center space-x-2 justify-start" key={index}>
-                                                    <input className={`form-check-input ${styles.roundedBlackCheckbox}`} type="checkbox" value="" id={`subitem${index}`} />
+                                                    <RoundedBlackCheckbox id={`subitem${index}`} />
                                                     <label className="form-check-label" htmlFor={`subitem${index}`}>
                                                         {subItem}
                                                     </label>
@@ -82,6 +84,8 @@ export const OffcanvasFilters = (props: OffcanvasFiltersProps) => {
                         </div>
                     );
                 })}
+
+                <ViewOptions />
             </div>
         </form>
     );

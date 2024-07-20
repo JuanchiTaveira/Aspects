@@ -1,0 +1,18 @@
+input.roundedBlackCheckbox {
+    appearance: none;
+    -webkit-appearance: none;
+    margin: 0;
+    width: 15px;
+    height: 15px;
+    border: 2px solid black;
+    border-radius: 100% !important;
+    cursor: pointer;
+    background-color: white;
+    background-image: none;
+    border-color: black !important;
+    box-shadow: none !important;
+
+    &:checked {
+        background-color: black;
+    }
+}
