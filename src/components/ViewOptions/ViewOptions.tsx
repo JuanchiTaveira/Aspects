@@ -6,7 +6,8 @@ import { TAILWIND_BREAKPOINTS } from '../../utils/Constants';
 
 export const ViewOptions = () => {
 
-    const [viewOptionRadio, setViewOptionRadio] = useState("4");
+    const [viewOptionRadio, setViewOptionRadio] = useState( isSmScreen() ? "1" : "4");
+    const productDetails = document.querySelectorAll(".product-details");
 
     const handleRadioChange = (event: React.MouseEvent<HTMLInputElement>) => {
         if (event.currentTarget.value === viewOptionRadio) {
@@ -24,11 +25,11 @@ export const ViewOptions = () => {
 
         if (!isLgScreen()) {
             if ((viewOptionRadio === "8") || (isSmScreen() && viewOptionRadio === "4")) {
-                document.querySelectorAll(".product-details").forEach((element) => {
+                productDetails.forEach((element) => {
                     element.classList.add("hidden");
                 });
             } else {
-                document.querySelectorAll(".product-details").forEach((element) => {
+                productDetails.forEach((element) => {
                     element.classList.remove("hidden");
                 });
             }
@@ -36,7 +37,7 @@ export const ViewOptions = () => {
 
 
 
-    }, [viewOptionRadio]);
+    }, [viewOptionRadio, productDetails]);
 
     return (
         <div className={`accordion-item`}>
