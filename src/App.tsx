@@ -7,7 +7,7 @@ function App() {
   return (
     <>
       <div className="App">
-        <NavBar title="Aspects" navItems={["SEARCH", "ACCOUNT"]} />
+        <NavBar />
         <Main />
       </div>
     </>

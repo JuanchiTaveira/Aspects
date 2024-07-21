@@ -3,15 +3,11 @@ import Product from '../../model/Product';
 import CartWidget from '../CartWidget/CartWidget';
 import { useMediaQuery } from 'react-responsive';
 import LogoImg from '../LogoImg/LogoImg';
-
-interface NavBarProps {
-  title: string;
-  navItems: string[];
-}
+import SearchButton from '../SearchButton/SearchButton';
 
 const cart: Product[] = [];
 
-const NavBar = (props: NavBarProps) => {
+const NavBar = () => {
   const isMobile = useMediaQuery({ maxWidth: 768 });
 
   return (
@@ -31,10 +27,8 @@ const NavBar = (props: NavBarProps) => {
         )}
 
         <nav className="flex items-center space-x-4">
-          {props.navItems.map((item, index) => (
-            <a key={index} href="#" className="p-2">{item}</a>
-          ))}
-
+          <SearchButton />
+          <button type="button" className="p-2">ACCOUNT</button>
           <CartWidget cart={cart} />
         </nav>
       </div>
