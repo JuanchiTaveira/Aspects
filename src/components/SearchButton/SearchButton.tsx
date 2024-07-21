@@ -6,7 +6,7 @@ const SearchButton = () => {
     const { toggleOverlay } = useOverlay();
 
     return (
-        <button type="button" className={style.button} onClick={toggleOverlay}>SEARCH</button>
+        <button type="button" className={`${style.button} p-2`} onClick={toggleOverlay}>SEARCH</button>
     );
 };
 
