@@ -1,23 +1,20 @@
-import { useState } from 'react';
 import ReactDOM from 'react-dom';
+import { useOverlay } from '../../context/OverlayContext';
 import style from './SearchButton.module.scss';
 
+
 const SearchButton = () => {
-	const [isActive, setIsActive] = useState(false);
+    const { isActive, toggleOverlay } = useOverlay();
 
-	const handleClick = () => {
-		setIsActive(!isActive);
-	};
-
-	return (
-		<>
-			<button type="button" className={style.button} onClick={handleClick}>SEARCH</button>
-			{ReactDOM.createPortal(
-				<div className={`${style.overlay} ${isActive ? style.active : ''}`} onClick={() => setIsActive(false)}></div>,
-				document.body
-			)}
-		</>
-	);
+    return (
+        <>
+            <button type="button" className={style.button} onClick={toggleOverlay}>SEARCH</button>
+            {ReactDOM.createPortal(
+                <div className={`${style.overlay} ${isActive ? style.active : ''}`} onClick={toggleOverlay}></div>,
+                document.body
+            )}
+        </>
+    );
 };
 
 export default SearchButton;

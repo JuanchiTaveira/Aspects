@@ -1,1 +1,17 @@
 @import '../../styles/variables.scss';
+
+.header {
+    position: fixed;
+    width: 100%;
+    height: auto;
+    --tw-bg-opacity: 1;
+    background-color: rgb(255 255 255 / var(--tw-bg-opacity));
+
+    &.active {
+        position: relative;
+        background: none;
+        z-index: 100;
+        color: white;
+        border-bottom: none;
+    }
+}
