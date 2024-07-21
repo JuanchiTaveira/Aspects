@@ -1,10 +1,13 @@
 import styles from './LogoImg.module.scss';
 import logoHeader from '../../assets/logo/logoHeader.png';
+import { useOverlay } from '../../context/OverlayContext';
 
 export const LogoImg = (props: { tailwindHeight: string }) => {
+    const { isActive } = useOverlay();
+    
     return (
         <a href="#" className={styles.pageTitle}>
-            <img className={props.tailwindHeight} src={logoHeader} alt="logo" />
+            <img className={`${props.tailwindHeight} ${isActive ? "filter invert" : ""}`} src={logoHeader} alt="logo" />
         </a>
     )
 }
