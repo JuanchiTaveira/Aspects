@@ -10,7 +10,7 @@ const SearchButton = () => {
         <>
             <button type="button" className={style.button} onClick={toggleOverlay}>SEARCH</button>
             {ReactDOM.createPortal(
-                <div className={`${style.overlay} ${isActive ? style.active : ''}`} onClick={toggleOverlay}></div>,
+                <div className={`${style.overlay} ${isActive ? style.active : ''}`}></div>,
                 document.body
             )}
         </>
