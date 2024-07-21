@@ -50,7 +50,7 @@ export const ViewOptions = () => {
             <div id={`sizeCollapse`} className={`accordion-collapse collapse ${styles.collapseItem}`}
                 aria-labelledby="headingTwo" data-bs-parent="#accordionFilters">
                 <div className={`accordion-body ${styles.accordionBody} pb-2`}>
-                    <div className={`list-group ${styles.listGroup} flex flex-row justify-between`}>
+                    <div className={`list-group ${styles.listGroup} flex flex-row justify-start`}>
 
                         {
                             isMdScreen() ? (
@@ -70,7 +70,7 @@ export const ViewOptions = () => {
                                 </>
                             ) : (
                                 <>
-                                    <div className="flex flex-row pl-3">
+                                    <div className="flex flex-row">
                                         <RoundedBlackCheckbox id="x4" type="radio" value="4" name="viewOptionRadio" handleClick={handleRadioChange} />
                                         <ViewOptionsX4 />
                                     </div>
