@@ -1,6 +1,6 @@
 @import '../../styles/variables.scss';
 
-.header {
+.header .navBar {
     position: fixed;
     width: 100%;
     height: auto;
@@ -14,4 +14,24 @@
         color: white;
         border-bottom: none;
     }
+}
+
+.searchOverlay {
+	position: fixed;
+	width: 100%;
+	height: 100%;
+	left: 0;
+	top: 0;
+	z-index: 99;
+	background: rgba(24, 24, 24, 0.6); // Fondo oscuro semitransparente
+	opacity: 0;
+	visibility: hidden;
+	transition: opacity .35s cubic-bezier(.645, .045, .355, 1), visibility 0s linear .35s; // Ajuste para transición
+	backdrop-filter: blur(15px);
+}
+
+.searchOverlay.active {
+	opacity: 1;
+	visibility: visible;
+	transition: opacity .35s cubic-bezier(.645, .045, .355, 1);
 }

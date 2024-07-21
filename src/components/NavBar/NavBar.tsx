@@ -1,5 +1,5 @@
 import { useOverlay } from '../../context/OverlayContext';
-import style from './NavBar.module.scss'; // Asume que tienes un archivo de estilos para NavBar
+import style from './NavBar.module.scss';
 import { useMediaQuery } from 'react-responsive';
 import CartWidget from '../CartWidget/CartWidget';
 import LogoImg from '../LogoImg/LogoImg';
@@ -14,8 +14,8 @@ const NavBar = () => {
   const { isActive } = useOverlay();
 
   return (
-    <header className={`border-b ${style.header} ${isActive ? style.active : ''}`}>
-      <div className={`flex items-center justify-between px-2 py-2 ${isMobile ? 'flex-col' : ''} `}>
+    <header className={`${style.header}`}>
+      <div className={`border-b flex items-center justify-between px-2 py-2 ${style.navBar} ${isActive ? style.active : ''} ${isMobile ? 'flex-col' : ''} `}>
 
         {isMobile ? (
           <div className="flex items-center justify-between w-full">
@@ -35,6 +35,7 @@ const NavBar = () => {
           <CartWidget cart={cart} />
         </nav>
       </div>
+      <div className={`${style.searchOverlay} ${isActive ? style.active : ''}`}></div>
     </header>
   );
 };
