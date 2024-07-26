@@ -1,11 +1,8 @@
 import { useEffect, useState } from 'react';
 import styles from './ProductFilter.module.scss';
 import OffcanvasFilters, { OffcanvasFiltersProps } from '../OffcanvasFilters/OffcanvasFilters';
-import { useSearchOverlay } from '../../context/SearchOverlayContext';
-
 
 const ProductFilter = () => {
-    const { isActiveSearch } = useSearchOverlay();
     const [isVisible, setIsVisible] = useState(true);
 
     useEffect(() => {
