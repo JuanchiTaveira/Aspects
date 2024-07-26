@@ -1,9 +1,9 @@
 import styles from './LogoImg.module.scss';
 import logoHeader from '../../assets/logo/logoHeader.png';
-import { useOverlay } from '../../context/OverlayContext';
+import { useSearchOverlay } from '../../context/SearchOverlayContext';
 
 export const LogoImg = (props: { tailwindHeight: string }) => {
-    const { isActive } = useOverlay();
+    const { isActiveSearch: isActive } = useSearchOverlay();
     
     return (
         <a href="#" className={styles.pageTitle}>

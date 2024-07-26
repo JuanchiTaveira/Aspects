@@ -1,0 +1,19 @@
+@import '../../styles/variables.scss';
+
+.active {
+	position: relative;
+	z-index: 100;
+	color: white;
+	border-bottom: none;
+
+	&>input {
+		background: none;
+
+		&:focus {
+			&::placeholder {
+				color: white;
+			}
+			outline-width: 0;
+		}
+	}
+}

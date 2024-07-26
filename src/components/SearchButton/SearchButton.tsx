@@ -1,9 +1,9 @@
-import { useOverlay } from '../../context/OverlayContext';
+import { useSearchOverlay } from '../../context/SearchOverlayContext';
 import style from './SearchButton.module.scss';
 
 
 const SearchButton = () => {
-    const { toggleOverlay } = useOverlay();
+    const { toggleSearchOverlay: toggleOverlay } = useSearchOverlay();
 
     return (
         <button type="button" className={`${style.button} p-2`} onClick={toggleOverlay}>SEARCH</button>

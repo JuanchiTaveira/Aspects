@@ -1,4 +1,4 @@
-import { useOverlay } from '../../context/OverlayContext';
+import { useSearchOverlay } from '../../context/SearchOverlayContext';
 import style from './NavBar.module.scss';
 import { useMediaQuery } from 'react-responsive';
 import CartWidget from '../CartWidget/CartWidget';
@@ -6,12 +6,13 @@ import LogoImg from '../LogoImg/LogoImg';
 import { MenuIcon } from '../MenuIcon/MenuIcon';
 import SearchButton from '../SearchButton/SearchButton';
 import Product from '../../model/Product';
+import { SearchBar } from '../SearchBar/SearchBar';
 
 const cart: Product[] = [];
 
 const NavBar = () => {
   const isMobile = useMediaQuery({ maxWidth: 768 });
-  const { isActive } = useOverlay();
+  const { isActiveSearch: isActive } = useSearchOverlay();
 
   return (
     <header className={`${style.header}`}>
@@ -35,6 +36,7 @@ const NavBar = () => {
           <CartWidget cart={cart} />
         </nav>
       </div>
+      <SearchBar isActive={isActive} />
       <div className={`${style.searchOverlay} ${isActive ? style.active : ''}`}></div>
     </header>
   );

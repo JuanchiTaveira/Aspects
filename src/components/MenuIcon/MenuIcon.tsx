@@ -1,9 +1,9 @@
 import styles from './MenuIcon.module.scss';
 import { SideMenu } from '../SideMenu/SideMenu'; // Import the SideMenu component
-import { useOverlay } from '../../context/OverlayContext';
+import { useSearchOverlay } from '../../context/SearchOverlayContext';
 
 export const MenuIcon = () => {
-  const { isActive } = useOverlay();
+  const { isActiveSearch: isActive } = useSearchOverlay();
   
   return (
     <>

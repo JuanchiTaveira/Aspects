@@ -1,12 +1,12 @@
 import React, { createContext, useContext, useState, ReactNode } from 'react';
 
-const OverlayContext = createContext({
-	isActive: false,
-	toggleOverlay: () => {},
+const SearchOverlayContext = createContext({
+	isActiveSearch: false,
+	toggleSearchOverlay: () => {},
 });
 
 // eslint-disable-next-line react-refresh/only-export-components
-export const useOverlay = () => useContext(OverlayContext);
+export const useSearchOverlay = () => useContext(SearchOverlayContext);
 
 interface OverlayProviderProps {
 	children: ReactNode;
@@ -15,13 +15,13 @@ interface OverlayProviderProps {
 export const OverlayProvider: React.FC<OverlayProviderProps> = ({ children }) => {
 	const [isActive, setIsActive] = useState(false);
 
-	const toggleOverlay = () => {
+	const toggleSearchOverlay = () => {
 		setIsActive(!isActive);
 	};
 
 	return (
-		<OverlayContext.Provider value={{ isActive, toggleOverlay }}>
+		<SearchOverlayContext.Provider value={{ isActiveSearch: isActive, toggleSearchOverlay: toggleSearchOverlay }}>
 			{children}
-		</OverlayContext.Provider>
+		</SearchOverlayContext.Provider>
 	);
 };
