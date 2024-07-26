@@ -1,5 +1,5 @@
 import styles from './MenuIcon.module.scss';
-import { SideMenu } from '../SideMenu/SideMenu'; // Import the SideMenu component
+import { SideMenu } from '../SideMenu/SideMenu';
 import { useSearchOverlay } from '../../context/SearchOverlayContext';
 
 export const MenuIcon = () => {
