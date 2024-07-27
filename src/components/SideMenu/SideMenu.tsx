@@ -20,7 +20,7 @@ export const SideMenu = () => {
                             <a href="https://www.instagram.com/manyaspects/?utm_source=ig_web_button_share_sheet" target="_blank">Instagram</a>
                         </li>
                         <li className={styles.link}>
-                            <a href="mailto:aspects@gmail.com" target="_blank" rel="noopener noreferrer">
+                            <a href="mailto:manyaspects@gmail.com" target="_blank" rel="noopener noreferrer">
                                 aspects@gmail.com
                             </a>
                         </li>
