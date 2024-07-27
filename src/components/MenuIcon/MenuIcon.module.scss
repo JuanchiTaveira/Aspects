@@ -18,4 +18,9 @@
 
 .btnActive {
     color: white !important;
+
+    &:disabled {
+        opacity: 1 !important;
+        border-color: transparent !important;
+    }
 }
