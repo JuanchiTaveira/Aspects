@@ -21,7 +21,7 @@ export const OffcanvasFilters = (props: OffcanvasFiltersProps) => {
     return (
         <form className={styles.offcanvasFilters}>
             <div className="px-0 form-check flex items-center space-x-2 justify-between">
-                <label className="form-check-label" htmlFor="hideSoldOut">
+                <label className={`${styles.hideSoldOut} form-check-label`} htmlFor="hideSoldOut">
                     Hide sold out products
                 </label>
                 <RoundedBlackCheckbox id="hideSoldOut" name="hideSoldOut" type="checkbox" />

@@ -1,8 +1,14 @@
 .offcanvasFilters {
 
+    * {
+        font-size: 12px;
+    }
+
     .accordionFilters {
+
         h2 {
             button {
+                font-size: 12px;
                 color: black;
                 background-color: transparent;
                 box-shadow: none;
