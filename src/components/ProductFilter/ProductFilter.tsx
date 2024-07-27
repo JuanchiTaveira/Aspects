@@ -1,6 +1,7 @@
 import { useEffect, useState } from 'react';
 import styles from './ProductFilter.module.scss';
 import OffcanvasFilters, { OffcanvasFiltersProps } from '../OffcanvasFilters/OffcanvasFilters';
+import closeButtonBlack from '../../assets/icons/closeButtonBlack150x150.png';
 
 const ProductFilter = () => {
     const [isVisible, setIsVisible] = useState(true);
@@ -61,8 +62,10 @@ const ProductFilter = () => {
                 </div>
             </div>
             <div className={`offcanvas offcanvas-start ${styles.offcanvasFilters} p-4`} tabIndex={-1} id="offcanvasFilters" aria-labelledby="offcanvasFiltersLabel">
-                <div className="offcanvas-header">
-                    <button type="button" className="btn-close text-reset shadow-none" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+                <div className="offcanvas-header flex flex-row justify-end pr-[12px]">
+                    <button type="button" className="text-reset shadow-none" data-bs-dismiss="offcanvas" aria-label="Close">
+                        <img src={closeButtonBlack} alt="Close filters" className="h-6"/>
+                    </button>
                 </div>
                 <div className="offcanvas-body">
                     <OffcanvasFilters collectionItems={offcanvasFiltersProps.collectionItems} filterByItems={offcanvasFiltersProps.filterByItems} />
