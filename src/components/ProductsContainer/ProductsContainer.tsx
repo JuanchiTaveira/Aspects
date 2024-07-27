@@ -11,8 +11,8 @@ export const ProductsContainer = (props: Props) => {
                 <div key={index} className="space-y-2">
                     <img src={product.imageUrl} alt={product.alt} className="w-full" />
                     <div className="flex justify-between product-details">
-                        <p className="text-sm">{product.name}</p>
-                        <p className="text-sm">€{product.price}</p>
+                        <p className="text-xs">{product.name}</p>
+                        <p className="text-xs">€{product.price}</p>
                     </div>
                 </div>
             ))}

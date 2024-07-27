@@ -14,8 +14,9 @@ export const SideMenu = () => {
             </div>
             <div className={`${styles.footer}`}>
                 <ul>
-                    <li>Contact us:</li>
-                    <ul className="pl-4">
+                    <li className={`${styles.link} ${styles.pointer} ${styles.itemTitle}`}>Privacy Policy</li>
+                    <li className={styles.itemTitle}>Contact us</li>
+                    <ul>
                         <li className={styles.link}>
                             <a href="https://www.instagram.com/manyaspects/?utm_source=ig_web_button_share_sheet" target="_blank">Instagram</a>
                         </li>
@@ -25,7 +26,6 @@ export const SideMenu = () => {
                             </a>
                         </li>
                     </ul>
-                    <li className={`${styles.link} ${styles.pointer}`}>Privacy Policy</li>
                     <li className="pt-3">© 2024 Aspects EU. All rights reserved.</li>
                 </ul>
             </div>

@@ -1,7 +1,7 @@
 .offcanvasBody {
     .menuItem {
         margin: 20px 0;
-        font-size: 1.2rem;
+        font-size: 15px;
         font-weight: 300;
         cursor: pointer;
 
@@ -12,10 +12,17 @@
 
     .footer {
 
-        font-size: .9rem;
+        * {
+            font-size: 11px;
+            font-weight: 300;
+        }
 
         li {
             padding-bottom: 10px;
+
+            &.itemTitle {
+                font-weight: 500;
+            }
 
             &.link {
 

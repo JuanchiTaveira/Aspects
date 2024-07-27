@@ -30,7 +30,7 @@ const NavBar = () => {
           </>
         )}
 
-        <nav className="flex items-center space-x-4">
+        <nav className="flex items-center space-x-4 text-xs font-medium">
           <SearchButton />
           <button type="button" className="p-2">ACCOUNT</button>
           <CartWidget cart={cart} />
