@@ -9,4 +9,24 @@
             text-decoration: underline;
         }
     }
+
+    .footer {
+
+        font-size: .9rem;
+
+        li {
+            padding-bottom: 10px;
+
+            &.link {
+
+                &:hover {
+                    text-decoration: underline;
+                }
+
+                &.pointer {
+                    cursor: pointer;
+                }
+            }
+        }
+    }
 }
