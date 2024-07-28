@@ -8,6 +8,10 @@
 	&>input {
 		background: none;
 
+		&::placeholder {
+			font-size: 12px;
+		}
+
 		&:focus {
 			&::placeholder {
 				color: white;
