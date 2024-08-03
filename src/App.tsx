@@ -5,7 +5,6 @@ import NavBar from "./components/NavBar/NavBar";
 import { OverlayProvider as SearchOverlayProvider } from "./context/SearchOverlayContext";
 import "./styles/main.scss";
 import ProductDetail from "./components/ProductDetail/ProductDetail";
-import { products } from './mock/mockData';
 
 function App() {
   return (
@@ -15,7 +14,8 @@ function App() {
           <NavBar />
           <Routes>
             <Route path="/shop" element={<Main />} />
-            <Route path="/product/:productId" element={<ProductDetail products={products} />} />
+            <Route path="/shop/category/:category" element={<Main />} />
+            <Route path="/product/:productId" element={<ProductDetail />} />
           </Routes>
         </SearchOverlayProvider>
       </div>

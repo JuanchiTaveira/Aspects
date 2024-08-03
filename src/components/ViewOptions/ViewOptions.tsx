@@ -21,7 +21,10 @@ export const ViewOptions = () => {
         const productsContainer = document.getElementById("productsContainer");
 
         const gridTemplateColumnsValue = `repeat(${viewOptionRadio}, minmax(0, 1fr))`; //TODO: use setViewOptionRadio instead of change css value
-        productsContainer!.style.gridTemplateColumns = gridTemplateColumnsValue;
+        
+        if (productsContainer) {
+            productsContainer.style.gridTemplateColumns = gridTemplateColumnsValue;
+        }
 
         if (!isLgScreen()) {
             if ((viewOptionRadio === "8") || (isSmScreen() && viewOptionRadio === "4")) {

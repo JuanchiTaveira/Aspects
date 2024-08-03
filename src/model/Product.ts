@@ -5,4 +5,5 @@ export default interface Product {
     description: string;
     imageUrl: string;
     alt?: string;
+    category?: string
 }
