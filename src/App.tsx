@@ -13,6 +13,7 @@ function App() {
         <SearchOverlayProvider>
           <NavBar />
           <Routes>
+            <Route path="/" element={<Main />} /> {/* TODO: change redirection to Home when developed */}
             <Route path="/shop" element={<Main />} />
             <Route path="/shop/collections/:category" element={<Main />} />
             <Route path="/product/:productId" element={<ProductDetail />} />
