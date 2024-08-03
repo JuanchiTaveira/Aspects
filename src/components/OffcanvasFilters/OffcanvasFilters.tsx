@@ -1,3 +1,4 @@
+import { Link } from 'react-router-dom';
 import RoundedBlackCheckbox from '../RoundedBlackCheckbox/RoundedBlackCheckbox';
 import ViewOptions from '../ViewOptions/ViewOptions';
 import styles from './OffcanvasFilters.module.scss';
@@ -44,7 +45,11 @@ export const OffcanvasFilters = (props: OffcanvasFiltersProps) => {
                                     <div className={`list-group ${styles.listGroup}`}>
                                         {item.subItems.map((subItem, index) => {
                                             return (
-                                                <button key={index} type="button" className="list-group-item list-group-item-action">{subItem}</button>
+                                                <Link to={`/shop/collections/${subItem}`} key={index}>
+                                                    <button type="button" className="list-group-item list-group-item-action">
+                                                        {subItem}
+                                                    </button>
+                                                </Link>
                                             );
                                         })}
                                     </div>
@@ -71,7 +76,7 @@ export const OffcanvasFilters = (props: OffcanvasFiltersProps) => {
                                         {item.subItems.map((subItem, index) => {
                                             return (
                                                 <div className="form-check flex items-center space-x-2 justify-start" key={index}>
-                                                    <RoundedBlackCheckbox id={`subitem${index}`} type="checkbox"/>
+                                                    <RoundedBlackCheckbox id={`subitem${index}`} type="checkbox" />
                                                     <label className="form-check-label" htmlFor={`subitem${index}`}>
                                                         {subItem}
                                                     </label>

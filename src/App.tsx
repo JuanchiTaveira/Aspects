@@ -14,7 +14,7 @@ function App() {
           <NavBar />
           <Routes>
             <Route path="/shop" element={<Main />} />
-            <Route path="/shop/category/:category" element={<Main />} />
+            <Route path="/shop/collections/:category" element={<Main />} />
             <Route path="/product/:productId" element={<ProductDetail />} />
           </Routes>
         </SearchOverlayProvider>

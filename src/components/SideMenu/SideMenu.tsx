@@ -1,3 +1,4 @@
+import { Link } from 'react-router-dom';
 import styles from './SideMenu.module.scss';
 
 export const SideMenu = () => {
@@ -5,7 +6,7 @@ export const SideMenu = () => {
         <div className={`offcanvas-body ${styles.offcanvasBody} flex flex-col justify-between`}>
             <div className="navContent">
                 <ul>
-                    <li className={styles.menuItem}>SHOP</li>
+                    <Link to="/shop"><li className={styles.menuItem}>SHOP</li></Link>
                     <li className={styles.menuItem}>COLLECTIONS</li>
                     <li className={styles.menuItem}>LOOKBOOK</li>
                     <li className={styles.menuItem}>MUSIC</li>

@@ -2,6 +2,7 @@ import { useEffect, useState } from 'react';
 import styles from './ProductFilter.module.scss';
 import OffcanvasFilters, { OffcanvasFiltersProps } from '../OffcanvasFilters/OffcanvasFilters';
 import closeButtonBlack from '../../assets/icons/closeButtonBlack150x150.png';
+import { Link } from 'react-router-dom';
 
 const ProductFilter = () => {
     const [isVisible, setIsVisible] = useState(true);
@@ -58,7 +59,7 @@ const ProductFilter = () => {
             <div className={`sticky top-0 ${styles.filters} ${isVisible ? styles.visible : styles.hidden}`}>
                 <div className={`flex justify-between items-center border-b`}>
                     <button className="text-xs px-4 py-4" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasFilters" aria-controls="offcanvasFilters">Refine</button>
-                    <button className="text-xs px-4 py-4">Shop All</button>
+                    <button><Link to="/shop" className="text-xs px-4 py-4">Shop All</Link></button>
                 </div>
             </div>
             <div className={`offcanvas offcanvas-start ${styles.offcanvasFilters} p-4`} tabIndex={-1} id="offcanvasFilters" aria-labelledby="offcanvasFiltersLabel">
