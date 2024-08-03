@@ -2,7 +2,7 @@ import Product from "../model/Product";
 
 export const products: Product[] = [
     {
-      id: 1,
+      id: "1",
       name: "Product 1",
       price: 100,
       description: "Description 1",
@@ -10,7 +10,7 @@ export const products: Product[] = [
       alt: "Product 1"
     },
     {
-      id: 2,
+      id: "2",
       name: "Product 2",
       price: 200,
       description: "Description 2",
@@ -18,7 +18,7 @@ export const products: Product[] = [
       alt: "Product 2"
     },
     {
-      id: 3,
+      id: "3",
       name: "Product 3",
       price: 300,
       description: "Description 3",
@@ -26,7 +26,7 @@ export const products: Product[] = [
       alt: "Product 3"
     },
     {
-      id: 4,
+      id: "4",
       name: "Product 4",
       price: 400,
       description: "Description 4",
@@ -34,7 +34,7 @@ export const products: Product[] = [
       alt: "Product 4"
     }, 
     {
-      id: 5,
+      id: "5",
       name: "Product 5",
       price: 400,
       description: "Description 5",
@@ -42,7 +42,7 @@ export const products: Product[] = [
       alt: "Product 5"
     },
     {
-      id: 6,
+      id: "6",
       name: "Product 6",
       price: 400,
       description: "Description 6",
@@ -50,7 +50,7 @@ export const products: Product[] = [
       alt: "Product 6"
     },
     {
-      id: 7,
+      id: "7",
       name: "Product 7",
       price: 400,
       description: "Description 7",
@@ -58,7 +58,7 @@ export const products: Product[] = [
       alt: "Product 7"
     },
     {
-      id: 8,
+      id: "8",
       name: "Product 8",
       price: 400,
       description: "Description 8",
@@ -66,7 +66,7 @@ export const products: Product[] = [
       alt: "Product 8"
     },
     {
-      id: 9,
+      id: "9",
       name: "Product 9",
       price: 400,
       description: "Description 9",
@@ -74,7 +74,7 @@ export const products: Product[] = [
       alt: "Product 9"
     },
     {
-      id: 10,
+      id: "10",
       name: "Product 10",
       price: 400,
       description: "Description 10",
@@ -82,7 +82,7 @@ export const products: Product[] = [
       alt: "Product 10"
     },
     {
-      id: 11,
+      id: "11",
       name: "Product 11",
       price: 400,
       description: "Description 11",
@@ -90,7 +90,7 @@ export const products: Product[] = [
       alt: "Product 11"
     },
     {
-      id: 12,
+      id: "12",
       name: "Product 12",
       price: 400,
       description: "Description 12",
@@ -98,7 +98,7 @@ export const products: Product[] = [
       alt: "Product 12"
     },
     {
-      id: 13,
+      id: "13",
       name: "Product 13",
       price: 400,
       description: "Description 13",
@@ -106,7 +106,7 @@ export const products: Product[] = [
       alt: "Product 13"
     },
     {
-      id: 14,
+      id: "14",
       name: "Product 14",
       price: 400,
       description: "Description 14",
@@ -114,7 +114,7 @@ export const products: Product[] = [
       alt: "Product 14"
     },
     {
-      id: 15,
+      id: "15",
       name: "Product 15",
       price: 400,
       description: "Description 15",
