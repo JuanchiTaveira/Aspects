@@ -2,10 +2,11 @@ import { useEffect, useState } from 'react';
 import styles from './ProductFilter.module.scss';
 import OffcanvasFilters, { OffcanvasFiltersProps } from '../OffcanvasFilters/OffcanvasFilters';
 import closeButtonBlack from '../../assets/icons/closeButtonBlack150x150.png';
-import { Link } from 'react-router-dom';
+import { Link, useParams } from 'react-router-dom';
 
 const ProductFilter = () => {
     const [isVisible, setIsVisible] = useState(true);
+    const { category } = useParams();
 
     useEffect(() => {
         const mainElement = document.querySelector("main");
@@ -59,13 +60,16 @@ const ProductFilter = () => {
             <div className={`sticky top-0 ${styles.filters} ${isVisible ? styles.visible : styles.hidden}`}>
                 <div className={`flex justify-between items-center border-b`}>
                     <button className="text-xs px-4 py-4" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasFilters" aria-controls="offcanvasFilters">Refine</button>
-                    <button><Link to="/shop" className="text-xs px-4 py-4">Shop All</Link></button>
+                    <ul className="flex text-xs px-4 py-4">
+                        <li><Link to="/shop" className="text-xs">Shop All</Link></li>
+                        {category ? <li className="pl-1"> {" > "} <Link to={`/shop/collections/${category}`} className="text-xs">{category}</Link></li> : ""}
+                    </ul>
                 </div>
             </div>
             <div className={`offcanvas offcanvas-start ${styles.offcanvasFilters} p-4`} tabIndex={-1} id="offcanvasFilters" aria-labelledby="offcanvasFiltersLabel">
                 <div className="offcanvas-header flex flex-row justify-end pr-[12px]">
                     <button type="button" className="text-reset shadow-none" data-bs-dismiss="offcanvas" aria-label="Close">
-                        <img src={closeButtonBlack} alt="Close filters" className="h-6"/>
+                        <img src={closeButtonBlack} alt="Close filters" className="h-6" />
                     </button>
                 </div>
                 <div className="offcanvas-body">
