@@ -1,6 +1,7 @@
 @import "../../styles/variables.scss";
 
 .main {
+    overscroll-behavior: none;
     position: fixed;
     top: 61px;
 
