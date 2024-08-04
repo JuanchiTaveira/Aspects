@@ -12,7 +12,6 @@ const ProductDetail: React.FC = () => {
 
     useEffect(() => {
         setLoading(true);
-        
         getProductById(productId ?? '')
             .then((res) => {
                 setProduct(res);

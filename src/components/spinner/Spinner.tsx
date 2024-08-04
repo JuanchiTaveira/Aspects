@@ -1,4 +1,4 @@
-import spinner from "./spinner.gif"; //TODO: change spinner gif
+import spinner from "./spinner.gif";
 
 export const Spinner = () => {
   return (
@@ -6,7 +6,7 @@ export const Spinner = () => {
       <img
         src={spinner}
         alt="loading"
-        style={{ width: "100px", margin: "auto", display: "block" }}
+        style={{ width: "100px", margin: "auto", display: "block", paddingTop: "20%" }}
       />
     </div>
   );

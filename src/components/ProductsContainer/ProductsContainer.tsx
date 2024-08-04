@@ -12,7 +12,7 @@ export const ProductsContainer: React.FC = () => {
 
     useEffect(() => {
         setLoading(true);
-        getProducts(category) // devuelve una promesa que va a tardar 2 segundos en resolverse
+        getProducts(category)
             .then((res) => {
                 setProducts(res);
             })
