@@ -2,11 +2,11 @@ import spinner from "./spinner.gif";
 
 export const Spinner = () => {
   return (
-    <div>
+    <div className="spinner relative top-[20%]">
       <img
         src={spinner}
         alt="loading"
-        className="w-[100px] m-auto block md:pt-[20%] pt-[40%]"
+        className="w-[100px] m-auto block"
       />
     </div>
   );

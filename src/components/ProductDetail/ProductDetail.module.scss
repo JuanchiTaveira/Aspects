@@ -1,0 +1,5 @@
+@import '../Main/Main.module.scss';
+
+.productDetail {
+    @extend .main;
+}

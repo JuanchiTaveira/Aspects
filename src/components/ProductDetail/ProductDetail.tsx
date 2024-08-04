@@ -3,6 +3,7 @@ import { useParams } from 'react-router-dom';
 import Product from '../../model/Product';
 import { getProductById } from '../../utils/fetchData';
 import Spinner from '../spinner/Spinner';
+import style from './ProductDetail.module.scss';
 
 
 const ProductDetail: React.FC = () => {
@@ -30,13 +31,16 @@ const ProductDetail: React.FC = () => {
     }
 
     return (
-        loading ? <Spinner /> :
-            <div>
-                <h1>{product.name}</h1>
-                <img src={product.imageUrl} alt={product.alt} />
-                <p>{product.description}</p>
-                <p>Price: €{product.price}</p>
-            </div>
+        <div className={style.productDetail}>
+            {loading ? <Spinner /> :
+                <div>
+                    <h1>{product.name}</h1>
+                    <img src={product.imageUrl} alt={product.alt} />
+                    <p>{product.description}</p>
+                    <p>Price: €{product.price}</p>
+                </div>
+            }
+        </div>
     );
 };
 
