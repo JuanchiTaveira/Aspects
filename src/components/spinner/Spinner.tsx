@@ -1,4 +1,4 @@
-import spinner from "./spinner.gif";
+import spinner from "./spinner.png";
 
 export const Spinner = () => {
   return (
@@ -6,7 +6,7 @@ export const Spinner = () => {
       <img
         src={spinner}
         alt="loading"
-        className="w-[100px] m-auto block"
+        className="w-[70px] m-auto block animate-spin"
       />
     </div>
   );

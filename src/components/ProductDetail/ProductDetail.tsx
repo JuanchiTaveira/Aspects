@@ -33,7 +33,7 @@ const ProductDetail: React.FC = () => {
     return (
         <div className={style.productDetail}>
             {loading ? <Spinner /> :
-                <div>
+                <div className="pt-6">
                     <h1>{product.name}</h1>
                     <img src={product.imageUrl} alt={product.alt} />
                     <p>{product.description}</p>
