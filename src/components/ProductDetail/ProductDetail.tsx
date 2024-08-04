@@ -20,7 +20,7 @@ const ProductDetail: React.FC = () => {
                 console.log(err);
             })
             .finally(() => {
-                /* setLoading(false); */
+                setLoading(false);
             });
 
     }, [productId])
