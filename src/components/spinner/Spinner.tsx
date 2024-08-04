@@ -6,7 +6,7 @@ export const Spinner = () => {
       <img
         src={spinner}
         alt="loading"
-        style={{ width: "100px", margin: "auto", display: "block", paddingTop: "20%" }}
+        className="w-[100px] m-auto block md:pt-[20%] pt-[40%]"
       />
     </div>
   );
