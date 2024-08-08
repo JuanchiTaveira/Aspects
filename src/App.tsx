@@ -5,6 +5,7 @@ import NavBar from "./components/NavBar/NavBar";
 import { OverlayProvider as SearchOverlayProvider } from "./context/SearchOverlayContext";
 import "./styles/main.scss";
 import ProductDetail from "./components/ProductDetail/ProductDetail";
+import LogIn from "./components/LogIn/LogIn";
 
 function App() {
   return (
@@ -17,6 +18,7 @@ function App() {
             <Route path="/shop" element={<Main />} />
             <Route path="/shop/collections/:category" element={<Main />} />
             <Route path="/product/:productId" element={<ProductDetail />} />
+            <Route path="/login" element={<LogIn />} />
           </Routes>
         </SearchOverlayProvider>
       </div>

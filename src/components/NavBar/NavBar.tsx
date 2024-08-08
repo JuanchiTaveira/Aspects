@@ -7,6 +7,7 @@ import { MenuIcon } from '../MenuIcon/MenuIcon';
 import SearchButton from '../SearchButton/SearchButton';
 import Product from '../../model/Product';
 import { SearchBar } from '../SearchBar/SearchBar';
+import { Link } from 'react-router-dom';
 
 const cart: Product[] = [];
 
@@ -32,7 +33,7 @@ const NavBar = () => {
 
         <nav className="flex items-center space-x-4 text-xs font-medium">
           <SearchButton />
-          <button type="button" className="p-2">ACCOUNT</button>
+          <Link to={'/login'} type="button" className="p-2 text-xs">ACCOUNT</Link>
           <CartWidget cart={cart} />
         </nav>
       </div>
