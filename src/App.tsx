@@ -6,6 +6,7 @@ import { OverlayProvider as SearchOverlayProvider } from "./context/SearchOverla
 import "./styles/main.scss";
 import ProductDetail from "./components/ProductDetail/ProductDetail";
 import { products } from './mock/mockData';
+import LogIn from "./components/LogIn/LogIn";
 
 function App() {
   return (
@@ -13,9 +14,11 @@ function App() {
       <div className="App">
         <SearchOverlayProvider>
           <NavBar />
+          <Main />
           <Routes>
             <Route path="/shop" element={<Main />} />
             <Route path="/product/:productId" element={<ProductDetail products={products} />} />
+            <Route path="/login" element={<LogIn />} />
           </Routes>
         </SearchOverlayProvider>
       </div>
